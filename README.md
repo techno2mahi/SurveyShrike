@@ -19,6 +19,7 @@ In Business layer we can write our business logic code and validation code as pe
 3. Data Access Layer (DAL)
 – Data Access Layer used to make connection with database server. In data access layer we can write database query, stored procedure for insert, update, delete, select operation on database.This layer only communicate with Business logic layer.
 
+![Architecture diagram](https://github.com/techno2mahi/SurveyShrike/blob/master/SS_Architecture-Diagram.png)
 
 
 ## Getting Started
