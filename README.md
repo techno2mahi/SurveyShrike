@@ -63,14 +63,17 @@ We have two REST based Web API to set up
 ### SurveyShrike-IdentityServer
 1. Checkout the repo 
 2. Goto the path /src/SurveyShrike-API/  and open the project in Visual Studio
-3. Right click on the EHRS.IdentityServer project and click on publish. The published artefacts can be deployed in IIS or can be directly deployed to Azure App service. in the development environment you can run this on IIS Express
-4. Once the server is started, within the  navigate to ["http://localhost:44442/swagger](http://localhost:44442/swagger). You can see the REST API endpoints. The Account API is having a register endpoint in  /api/identity/v1/Register
+3. Goto the path \Documents\SurveyShrike-Database-Backup.zip and unzip the same to get the database backup file. Restore it to a database.
+4. open the web.config file and fix the connection string as per your SQL server instance
+5. Right click on the EHRS.IdentityServer project and click on publish. The published artefacts can be deployed in IIS or can be directly deployed to Azure App service. in the development environment you can run this on IIS Express
+6. Once the server is started, within the  navigate to ["http://localhost:44442/swagger](http://localhost:44442/swagger). You can see the REST API endpoints. The Account API is having a register endpoint in  /api/identity/v1/Register
     
 ### SurveyShrike-WebAPI
 1. Checkout the repo 
 2. Goto the path /src/SurveyShrike-API/  and open the project in Visual Studio
-3. Right click on the EHRS.WebAPI project and click on publish. The published artefacts can be deployed in IIS or can be directly deployed to Azure App service. in the development environment you can run this on IIS Express
-4. Once the server is started, within the  navigate to ["http://localhost:44444/swagger](http://localhost:44444/swagger). You can see the REST API endpoints. The Account API is having a register endpoint in  /api/services/v1/SurveyAPI
+3. The database is the same that was being used for the IdentityServer API
+4. Right click on the EHRS.WebAPI project and click on publish. The published artefacts can be deployed in IIS or can be directly deployed to Azure App service. in the development environment you can run this on IIS Express
+5. Once the server is started, within the  navigate to ["http://localhost:44444/swagger](http://localhost:44444/swagger). You can see the REST API endpoints. The Account API is having a register endpoint in  /api/services/v1/SurveyAPI
 
  ## Setting up Frontend End Applications
 We have one Angular 6 application to set up 
@@ -94,4 +97,4 @@ We have one Angular 6 application to set up
  
 ## Project Code Outline
 
-Will update the solution structure later along with the youtube video explaining the architecture of the same. 
+Will update  the youtube video URL explaining the architecture of the same. 
