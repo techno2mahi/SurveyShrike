@@ -32,12 +32,15 @@ You will need the following tools:
 Tools:
 -   [Visual Studio Code or Visual Studio 2019](https://visualstudio.microsoft.com/vs/)  (version 16.2 +)
 -   [Node.js](https://nodejs.org/en/)  (version 10 or later) with npm (version 6.11.3 or later)
+-   Postman
 
 Technologies:
 -   .NET framework 4.5
 -   EntityFramework
 -   SQL Server 2012 R2
 -   InMemory Caching
+-   Web API 2.0
+-   OAuth 2.0 and OWIN 
 
 ### Prerequisites Frontend Application(Tools and Technologies)
 You will need the following:
