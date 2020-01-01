@@ -4,7 +4,6 @@
 This is the survey application which manages surveys. The admin have access to the survey create and management and the normal users will be able to take surveys.
  
 
-
 ## Readings  
 **N-Tier Architecture** – Three tier architecture means the project divided into three main layers or we can also say our project developed and maintained in to three separate layers.
 
