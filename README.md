@@ -95,4 +95,4 @@ We have one Angular 6 application to set up
  
 ## Project Code Outline
 
-Will update  the youtube video URL explaining the architecture of the same. 
+Youtube video URL explaining the architecture of the same.  https://youtu.be/7aZ9iw98p1c
