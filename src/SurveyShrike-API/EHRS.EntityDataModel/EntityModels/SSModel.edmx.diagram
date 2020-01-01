@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d84376ac2ab746eb8007612b01f5fe5c" Name="Diagram1">
+        <EntityTypeShape EntityType="SurveyShrikeModel.AspNetRole" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SurveyShrikeModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="2.25" />
+        <EntityTypeShape EntityType="SurveyShrikeModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="SurveyShrikeModel.AspNetUser" Width="1.5" PointX="3" PointY="1.5" />
+        <EntityTypeShape EntityType="SurveyShrikeModel.Client" Width="1.5" PointX="0.75" PointY="9" />
+        <EntityTypeShape EntityType="SurveyShrikeModel.EntityType" Width="1.5" PointX="2.75" PointY="9" />
+        <EntityTypeShape EntityType="SurveyShrikeModel.FormField" Width="1.5" PointX="10" PointY="1.5" />
+        <EntityTypeShape EntityType="SurveyShrikeModel.GenderType" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SurveyShrikeModel.ScopeClaim" Width="1.5" PointX="10" PointY="5.875" />
+        <EntityTypeShape EntityType="SurveyShrikeModel.Scope" Width="1.5" PointX="7.75" PointY="5.25" />
+        <EntityTypeShape EntityType="SurveyShrikeModel.Survey" Width="1.5" PointX="7.75" PointY="1.25" />
+        <EntityTypeShape EntityType="SurveyShrikeModel.Token" Width="1.5" PointX="4.75" PointY="9" />
+        <AssociationConnector Association="SurveyShrikeModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="SurveyShrikeModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="SurveyShrikeModel.FK_AspNetUsers_GenderType" />
+        <AssociationConnector Association="SurveyShrikeModel.FK_FormField_Survey" />
+        <AssociationConnector Association="SurveyShrikeModel.FK_dbo_ScopeClaims_dbo_Scopes_Scope_Id" />
+        <AssociationConnector Association="SurveyShrikeModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

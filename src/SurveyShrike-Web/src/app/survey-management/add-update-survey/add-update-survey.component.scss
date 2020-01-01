@@ -1,0 +1,81 @@
+@import '../../../assets/scss/app.variables.scss';
+
+.manage-survey label{
+    font-size: 12px;
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+}
+.manage-survey button.mat-green{
+    margin-bottom: 15px;
+}
+
+.cancel-btn{
+    margin-left: 5%;
+}
+
+.manage-survey .survey-list{
+    display: inline-block!important;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+}
+.manage-survey .survey-list .edit-list{
+float: left;
+width: 100%;
+margin: 10px 0;
+}
+.manage-survey .survey-list .edit-list h5{
+font-weight: 400;
+}
+.manage-survey .survey-list .edit-list ul{
+    float: left;
+    width: 100%;
+ }
+ .manage-survey .survey-list .edit-list ul li{
+    float: left;
+    width: 100%;
+    background: none;
+    padding: 5px 0;
+ }
+ .manage-survey .survey-list .edit-list ul li .field{
+    float: left;
+    width: 25%;
+    font-weight: 400;
+ }
+ .manage-survey .survey-list .edit-list ul li .value{
+    float: left;
+    width: 75%;
+ }
+ .manage-survey .survey-list .edit-list ul li .field b{
+     float: right;
+     margin-right: 10px;
+     font-weight: 400;
+ }
+.manage-survey .survey-list ul{
+    display: inline-block;
+    width: 100%;
+    padding:0;
+    margin: 0;
+}
+
+.manage-survey .survey-list ul li{
+    display: inline-block;
+    width: 96%;
+    margin-bottom: 5px;
+    background:$light-gray-color;
+    border-radius: 5px;
+    padding: 5px;
+}
+.manage-survey .survey-list ul li h5{
+  font-weight: 400;
+}
+.manage-survey .survey-list ul li h5 mat-icon{
+float: right;
+cursor: pointer;
+margin: 3px 0 3px 10px;
+}
+.manage-survey .survey-list ul li p{
+  margin: 0;
+}
+

@@ -1,0 +1,32 @@
+<mat-card class="mat-card manage-survey">
+    <div fxLayout="row wrap" fxLayoutAlign="center">
+        <div fxFlex="100" fxFlex.gt-sm="49" fxFlex.gt-xs="49">
+                <div class="text-center display-block">
+            <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <div class="survey-list" *ngIf="survey">
+                <div class="edit-list">
+                    <h5>{{survey?.surveyTitle}}</h5>
+                    <button class="mat-button-wrapper update-survey cursor-pointer mat-raised-button mat-icon-button">
+                            <mat-icon (click)="editDetails()" class="mat-icon material-icons" role="img" aria-hidden="true">edit</mat-icon>
+                    </button>
+                 <ul>
+                   <li><span class="field">Title <b>:</b></span><span class="value">{{survey.surveyTitle}}</span></li>
+                   <li><span class="field">Created on <b>:</b></span><span class="value">{{survey?.createdOn  | date}}</span></li>
+                   <li><span class="field">Form Fields <b>:</b></span><span class="value">Form Fields will go here</span></li>
+                 </ul>
+                </div>
+              </div>
+            </div>
+            </div>
+             <div class="view-survey-btn-wrapper"> 
+        
+        <div class="text-center display-block">
+            <button (click)="onCancelClick()" type="submit" mat-raised-button>Cancel</button>
+        </div>
+    </div>      
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="49" fxFlex.gt-xs="49" class="helper-block">
+
+        </div>
+    </div>
+  </mat-card>

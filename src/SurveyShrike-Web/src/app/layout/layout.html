@@ -1,0 +1,81 @@
+<div class="app" dir="ltr" [ngClass]="{'app-dark': dark, 'boxed': boxed, 'collapsed-sidebar': collapseSidebar, 'compact-sidebar': compactSidebar, 'customizer-in': customizerIn}">
+    <mat-sidenav-container class="gene-container">
+        <mat-sidenav #sidenav [mode]="sidenavMode" [opened]="sidenavOpen" class="sidebar-area">
+            <div class="sidebar-panel gene-sidenav" fxLayout="column">
+                <mat-toolbar class="sidebar-logo">
+                    <a class="gene-logo" [routerLink]="['/']">
+
+                        <div class="logo-text inline-block">
+
+                            <img src="assets/images/logo-final.png" width="120" height="90">
+                        </div>
+                    </a>
+                </mat-toolbar>
+                <div class="sidebar-container">
+                    <div class="gene-user-thumb text-center">
+                        <span class="gene-user-name gene-block">Hello, {{userName}}</span>
+                        <div class="child-menu-select">
+                            <a href="#" class="parent">
+                                <img src="assets/images/user-1.jpg" />
+                            </a>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </mat-sidenav>
+        <mat-toolbar class="gene-header-toolbar" *ngIf="!showBackButton">
+            <button mat-button class="gene-ham-icon cursor-pointer">
+                <mat-icon role="img" class="material-icons mat-icon" aria-label="menu" (click)="sidenav.toggle()">menu</mat-icon>
+            </button>
+            <a class="navbar-brand">{{header}}</a>
+            <span fxFlex></span>
+            <div class="secondary-menu">
+                <button class="user-button" mat-button (click)="goToHome()">
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon>home</mat-icon>
+                    </div>
+                </button>
+                <button class="user-button" mat-button [matMenuTriggerFor]="menu">
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon>account_circle</mat-icon>
+                    </div>
+                </button>
+             
+              
+            </div>
+        </mat-toolbar>
+        <mat-toolbar class="gene-header-toolbar back-arrow" *ngIf="showBackButton" fxHide="false" fxHide.gt-sm>
+            <a (click)="goBack()" class="back-arrow-btn">
+                <mat-icon role="img" class="material-icons mat-icon">arrow_back</mat-icon>
+            </a>
+            <a class="navbar-brand" href="#">{{header}}</a>
+            <!-- </div> -->
+        </mat-toolbar>
+        <mat-divider></mat-divider>
+        
+        <div class="gene-base-container" #scrollContainer>
+            <div class="inner-container">
+                <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>
+               
+            </div>
+            <thin-footer></thin-footer>
+        </div>
+    </mat-sidenav-container>
+</div>
+
+<mat-menu class="user-menu" x-position="before" y-position="below" #menu="matMenu">
+    <button mat-menu-item (click)="viewProfile()">
+        <mat-icon>account_circle</mat-icon>
+        <span>Profile</span>
+    </button>
+ 
+ 
+    <mat-divider></mat-divider>
+    <button (click)="logout()" mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+    </button>
+</mat-menu>
+ 
+ 

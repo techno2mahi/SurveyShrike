@@ -1,0 +1,114 @@
+@import '../../../assets/sass/variable.scss';
+:host{
+    @include opacity(.6);
+    z-index: 1025;
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background: $black;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    display: block;
+    clear: both;
+ 
+}
+.sk-three-bounce {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.sk-three-bounce-inner{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    
+}
+
+.sk-child,
+.sk-child:after {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    
+}
+.sk-child {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    display: block;
+    clear: both;
+    border-top: 0.6rem solid rgba(225, 236, 243, 0.2);
+    border-right: 0.6rem solid rgba(225, 236, 243, 0.2);
+    border-bottom: 0.6rem solid rgba(225, 236, 243, 0.2);
+    border-left: 0.6rem solid $white;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+
+.loadingText{
+    position: relative; 
+    font-size :1.2rem ;
+    color: $white;
+}
+
+@-webkit-keyframes load8 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes load8 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  /* CSS ONLY FOR IE 10+  */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   
+  }
+
+
+.loadingText{
+    position: relative; 
+    font-size :1.2rem ; 
+    // white-space: pre;
+}
+//component wise loader css
+// :host(.loader-search){
+//     background: transparent;
+//     top:-20px;
+// }
+:host(.fullLoader) {
+    position: fixed;
+    overflow: hidden;
+}
+// :host(.loader-search) /deep/ .sk-three-bounce .sk-child{
+//     width:10px;
+//     height: 10px;
+// }
+
+
+:host(.loader-right){
+    background: lightgray;
+}

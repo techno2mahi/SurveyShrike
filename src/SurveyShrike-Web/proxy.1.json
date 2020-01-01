@@ -1,0 +1,36 @@
+{
+  "/api/identity/*" : {
+    "target": "http://localhost:44442/",
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": {"localhost:4200" : "localhost:44442"}
+    },
+    "/token" : {
+    "target": "http://localhost:44442/",
+    "secure": false,
+    "logLevel": "debug"
+    },
+  "/api/services" : {
+    "target": "http://localhost:44444/",
+    "secure": false,
+    "logLevel": "debug"
+    }
+}
+
+{
+  "/api/identity/*" : {
+    "target": "http://surveyshrike.azurewebsites.com/",
+    "secure": false,
+    "logLevel": "debug"
+    },
+    "/token" : {
+      "target": "http://surveyshrike.azurewebsites.com/",
+    "secure": false,
+    "logLevel": "debug"
+    },
+  "/api/services" : {
+    "target": "http://surveyshrike.azurewebsites.com/",
+    "secure": false,
+    "logLevel": "debug"
+    }
+}

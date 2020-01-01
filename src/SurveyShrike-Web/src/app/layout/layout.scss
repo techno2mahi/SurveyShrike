@@ -1,0 +1,110 @@
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-arrow{
+  padding:0px !important;
+  display: block !important;
+}
+
+.sidenav-scrollbar-container{
+  position: absolute;
+  width: 100%;
+}
+
+.back-arrow-btn{
+  float: left;
+  margin: 12px 10px 0 15px;
+}
+.back-arrow-btn .mat-icon{
+  font-size: 20px;
+}
+
+body .mat-calendar-next-button.mat-icon-button{
+  width: 40px!important;
+  height: 40px!important;
+  min-width: 40px!important;
+}
+body .mat-calendar-previous-button.mat-icon-button{
+  width: 40px!important;
+  height: 40px!important;
+  min-width: 40px!important;
+}
+
+.child-menu-select{
+  float: left;
+  width: 92%;
+  padding: 10px;
+  padding-left: 40%;
+}
+.child-menu-select img{
+  width: 50px;
+  border-radius: 50%;
+}
+
+.child-menu-select .parent{
+  float: left;
+}
+.child-menu-select .child2{
+  float: right;
+
+}
+.child-menu-select .child1{
+  float: right;
+  margin-left: 10px;
+}
+
+.child-menu{
+  float: left;
+  width: 100%;
+  background: #2a2933;
+  padding: 10px 0;
+  color: #fff;
+}
+.child-menu h3{
+  padding: 0 10px 10px;
+  border-bottom: 1px solid #fff;
+}
+.child-menu ul{
+  float: left;
+  width:83%;
+  list-style: none;
+  padding: 0 12px;
+}
+.child-menu ul li{
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.child-menu ul li a{
+  float: left;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.child-menu ul li a:hover{
+background: #8bc34a;
+}
+.child-menu ul li a i{
+  float: right;
+  font-size: 10px;
+  line-height: 20px;
+} 
+
+.user-menu .mat-icon{
+  color: #8bc34a!important;
+}
+
+.survey-list-sidebar{
+  width: 100%;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+  border-color: #8bc34a !important;
+}
+ .mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #8bc34a !important;
+}

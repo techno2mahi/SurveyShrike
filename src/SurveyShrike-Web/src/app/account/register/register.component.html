@@ -1,0 +1,69 @@
+<div class="overlay overlay-login">
+	<div class="credential-out">
+		<ng-container *ngIf="currentView == viewtype.Default; else verifyPhone">
+			<mat-card>
+				<div class="gene-card-title title-center">
+					<div fxLayout="row wrap" fxLayoutAlign="start center">
+						<div fxLayout="column">
+							<h4>Register</h4>
+						</div>
+						<span fxFlex></span>
+					</div>
+				</div>
+
+				<div class="gene-card-content">
+					<div fxLayout="column" class="text-center">
+						<div class="text-center">
+							<h5>Please fill your information</h5>
+						</div>
+					</div>
+					<form #form="ngForm" (ngSubmit)="register()">
+						<div fxLayout="column" fxLayoutAlign="start stretch">
+							<div fxLayout="row wrap" fxLayoutAlign="space-between center">
+								<div fxFlex="100">
+									<mat-form-field class="full-wid">
+										<input matInput placeholder="Full Name" type="text" fieldName="Full Name"
+											name="name" [(ngModel)]="model.name" handleValidation required
+											minlength="3">
+									</mat-form-field>
+								</div>
+							</div>
+							<div fxLayout="row wrap" fxLayoutAlign="space-between center">
+								<div fxFlex="100">
+									<mat-form-field class="full-wid">
+										<input matInput placeholder="Mobile No." type="text" fieldName="Mobile No."
+											name="mobileNo" pattern="[0-9]+" [(ngModel)]="model.mobileNo"
+											handleValidation required minlength="10" maxlength="10">
+									</mat-form-field>
+								</div>
+							</div>
+							<div fxLayout="row wrap" fxLayoutAlign="space-between center">
+								<div fxFlex="100">
+									<mat-form-field class="full-wid">
+										<input matInput placeholder="Email" type="email" fieldName="Email" name="email"
+											pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" [(ngModel)]="model.email"
+											handleValidation required>
+									</mat-form-field>
+								</div>
+							</div>
+							<div fxLayout="row wrap" fxLayoutAlign="space-between center">
+								<div fxFlex="100">
+									<mat-form-field class="full-wid">
+										<input matInput placeholder="Password" name="password" fieldName="Password"
+											[(ngModel)]="model.password" #password="ngModel" type="password"
+											handleValidation required minlength="8">
+									</mat-form-field>
+								</div>
+							</div>
+							<button class="mat-green" mat-raised-button [disabled]="!form.valid">Register</button>
+							<p style="padding-top: .5rem;" class="text-center">Already have an account?
+								<a [routerLink]="['/login']" class="text-center mat-text-primary">Login</a>
+							</p>
+
+						</div>
+					</form>
+				</div>
+			</mat-card>
+		</ng-container>
+	</div>
+</div>

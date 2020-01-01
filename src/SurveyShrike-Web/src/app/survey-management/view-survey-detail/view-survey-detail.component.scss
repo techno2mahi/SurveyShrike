@@ -1,0 +1,121 @@
+@import '../../../assets/scss/app.variables.scss';
+
+.manage-survey label{
+    display:inline-block;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.manage-survey button.mat-green{
+    margin-bottom: 15px;
+}
+
+.manage-survey input[type="text"]{
+    width: 97.5%;
+    float: left;
+    margin: 0 0 10px 0;
+    padding: 5px;
+    border: 1px solid #e7e7e7;
+}
+
+.manage-survey .survey-list{
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+}
+.manage-survey .survey-list .edit-list{
+float: left;
+width: 100%;
+margin: 10px 0;
+}
+.manage-survey .survey-list .edit-list h5{
+font-weight: 400;
+    margin-right: 10px;
+    float: left;
+    font-size: 16px;
+    color: #000;
+}
+.manage-survey .survey-list .edit-list .update-survey{
+    float: left;
+}
+.manage-survey .survey-list .edit-list ul{
+    float: left;
+    width: 100%;
+ }
+ .manage-survey .survey-list .edit-list ul li{
+    float: left;
+    width: 100%;
+    background: none;
+    padding: 5px 0;
+ }
+ .manage-survey .survey-list .edit-list ul li .field{
+    float: left;
+    width: 40%;
+    font-weight: 400;
+ }
+ .manage-survey .survey-list .edit-list ul li .value{
+     float: left;
+     width: 60%;
+ }
+ .manage-survey .survey-list .edit-list ul li .field b{
+     float: right;
+     margin-right: 10px;
+     font-weight: 400;
+ }
+.manage-survey .survey-list ul{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    border-top:1px solid $light-gray-color;
+    margin: 0;
+    border-bottom:1px solid $light-gray-color;
+}
+
+.manage-survey .survey-list ul li{
+    display: inline-block;
+    width: 96%;
+    margin-bottom: 5px;
+    background:$light-gray-color;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: left;
+}
+.manage-survey .survey-list ul li h5{
+  font-weight: 400;
+}
+.manage-survey .survey-list ul li h5 mat-icon{
+float: right;
+cursor: pointer;
+margin: 3px 0 3px 10px;
+}
+.manage-survey .survey-list ul li p{
+  margin: 0;
+}
+.view-survey-btn-wrapper{
+   float: left;
+   width: 100%;
+   text-align: center; 
+}
+.view-survey-btn-wrapper .display-block{
+    display: inline-block!important;
+    margin: 0 10px;
+}
+
+.manage-survey .survey-list .edit-list .update-survey{
+    height: 3.125rem;
+    width: 3.125rem;
+    min-width: 3.125rem;
+    line-height: 4.5;
+    margin-bottom: 10px;
+    margin-top: -18px;
+    float: none;
+}
+
+@media(max-width:767px){
+
+    .view-survey-btn-wrapper .display-block{
+        display:block!important;
+        margin: 0px;
+    }
+}
+

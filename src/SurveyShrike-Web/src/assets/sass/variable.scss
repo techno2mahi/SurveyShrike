@@ -1,0 +1,34 @@
+
+$fontFamily:'Open Sans', Arial, Helvetica, sans-serif;
+$green10:#5bbc93;
+$blue:#0e4375;
+$yellow:#f5c851;
+$orange:#ef823f;
+$black: #000;
+$white: #fff;
+$gray:#444;
+
+//CSS for general png icon
+@mixin icon($width, $height, $background, $backgroundsize ) {
+    width:$width;
+    height:$height;
+    background-image:$background; 
+    background-size: $backgroundsize;
+    background-repeat: no-repeat;
+    display: inline-block; 
+}
+@mixin border-radius($obj ) {
+    -webkit-border-radius: $obj ;
+    -moz-border-radius: $obj ;
+    border-radius: $obj;
+
+}
+
+//Opacity
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity-ie+")";
+    filter: alpha(opacity=$opacity-ie);
+  }
+

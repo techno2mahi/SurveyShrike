@@ -1,0 +1,43 @@
+<app-loader [class.hide]="!loading" [loadingText]="'loading...'"></app-loader>
+<mat-card class="mat-card manage-survey">
+  <div fxLayout="row wrap" fxLayoutAlign="space-between">
+    <div fxFlex="100" fxFlex.gt-sm="49" fxFlex.gt-xs="49">
+      <div class="display-block">
+        <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.gt-xs="100">
+          <form #myForm="ngForm" (ngSubmit)="addUpdateSurvey(myForm.valid)" novalidate *ngIf="survey">
+
+            <div class="survey-list">
+              <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.gt-xs="100">
+                <mat-form-field class="full-wid mat-form-field  ng-pristine ng-invalid mat-input-invalid ng-touched">
+                  <input matInput placeholder="Survey Name" fieldName="Survey name" minlength="3" maxlength="250"
+                    handleValidation required name="surveyName" [(ngModel)]="survey.surveyTitle">
+                </mat-form-field>
+              </div>
+              <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.gt-xs="100">
+                <mat-form-field class="full-wid mat-form-field  ng-pristine ng-invalid mat-input-invalid ng-touched">
+                    <input matInput [matDatepicker]="establishedOnPicker" placeholder="To be published On" name="establishedOn" [(ngModel)]="survey.establishedOn">
+                    <mat-datepicker-toggle matSuffix [for]="establishedOnPicker"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #establishedOnPicker></mat-datepicker>
+                </mat-form-field>
+              </div>
+              
+            
+              <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.gt-xs="100">
+              <mat-form-field class="full-wid mat-form-field  ng-pristine ng-invalid mat-input-invalid ng-touched">
+                <input matInput placeholder="Contact Person" type="text" name="name" fieldName="Contact Person" minlength="3" maxlength="50" required [(ngModel)]="survey.contactPerson">
+              </mat-form-field>
+            </div>
+            <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.gt-xs="100" class="text-center">
+                <button class="mat-green" type="submit" [disabled]="!myForm?.valid" mat-raised-button>{{headerText}}</button>
+                <button type="button" class="cancel-btn" mat-raised-button color="primary" (click)="onCancelClick()">Cancel</button>
+              </div>
+          </div>
+         
+          </form>
+        </div>
+        
+      </div>
+    </div>
+ 
+  </div>
+</mat-card>

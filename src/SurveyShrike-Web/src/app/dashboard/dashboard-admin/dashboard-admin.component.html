@@ -1,0 +1,50 @@
+<div fxLayout="row wrap" fxLayoutAlign="start" class="dash-card">
+ 
+    <div fxFlex.xl="24" fxFlex.lg="24" fxFlex.md="48" fxFlex.sm="48" fxFlex.xs="100" class="mrgn-b-md mrgn-r-xs">
+        <mat-card class="mat-orange-600" (click)="manageUserRoles()">
+            <div mat-card-widget>
+                <button mat-mini-fab color="primary" class="inline-block" mat-card-icon>
+                    <mat-icon>account_circle</mat-icon>
+                </button>
+                <div class="inline-block pad-wrap">
+                    <h5 mat-card-widget-title class="mrgn-b-none">Total Users</h5>
+                    <h5>1,425</h5>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    <div fxFlex.xl="24" fxFlex.lg="24" fxFlex.md="48" fxFlex.sm="48" fxFlex.xs="100" class="mrgn-b-md mrgn-r-xs">
+        <mat-card class="mat-cyan">
+            <div mat-card-widget>
+                <button mat-mini-fab color="primary" class="inline-block" mat-card-icon>
+                    <mat-icon>person</mat-icon>
+                </button>
+                <div class="inline-block pad-wrap">
+                    <h5 mat-card-widget-title class="mrgn-b-none">Total Forms</h5>
+                    <h5>1,425</h5>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    
+  
+</div>
+<br>
+
+<div fxLayout="row wrap" fxLayoutAlign="space-between center"  class="quick-links">
+    <div  fxFlex="100" fxFlex.gt-sm="32" fxFlex.gt-xs="32">
+        <h4 class="integrated">App Menu</h4>
+        <ul>
+        
+            <li>
+                <a (click)="redirectTo('dashboard/add-update-survey/0')" class="linkk">Create a Survey</a>
+            </li>
+            <li>
+                <a (click)="redirectTo('dashboard/manage-survey')" class="linkk">Manage Surveys</a>
+            </li> 
+            <li>
+                <a (click)="redirectToFillTheSurvey('FillTheSurvey')" class="linkk">Fill the Survey</a>
+            </li> 
+        </ul>
+    </div> 
+</div>

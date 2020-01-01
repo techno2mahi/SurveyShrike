@@ -1,0 +1,18 @@
+2020-01-01 17:34:11,368 [26] ERROR EHRS.Shared.Logger [(null)] <(null)> - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at EHRS.Data.SurveyDAC.CreateSurvey(ISurveyDTO surveyDTO)
+
+2020-01-01 17:35:34,811 [25] ERROR EHRS.Shared.Logger [(null)] <(null)> - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at EHRS.Data.SurveyDAC.CreateSurvey(ISurveyDTO surveyDTO)
+
+2020-01-01 17:38:20,601 [25] ERROR EHRS.Shared.Logger [(null)] <(null)> - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at EHRS.Data.SurveyDAC.CreateSurvey(ISurveyDTO surveyDTO)
+

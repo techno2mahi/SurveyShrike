@@ -1,0 +1,56 @@
+.main-content{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.features-section{
+    float: left;
+    width: 100%;
+}
+.features-section h1{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding-bottom: 10px;
+}
+
+.features-section mat-divider {
+    border-top: 1px solid rgba(0, 0, 0, 0.12) !important;
+    width: 60%;
+    margin: 10px 0 20px;
+    display: inline-block;
+}
+.features-section > div > div.features{
+    padding-top: 30px;
+}
+.features-section > div > div.features:first-child{
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+.features-section > div > div.features{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.features-section > div:last-child > div.features{
+ border-bottom: none;
+}
+.features-section .fa{
+    font-size: 35px;
+    color:#8bc34a;
+}
+.feature-wrap{
+    margin-bottom: 30px;
+}
+@media (max-width:767px){
+    .features-section > div > div.features{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+@media (max-width:480px){
+
+    .features-section > div > div.features:first-child{
+        border-right: none;
+    } 
+    .features-section > div:last-child > div.features:first-child{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    } 
+}

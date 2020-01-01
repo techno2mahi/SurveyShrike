@@ -1,0 +1,60 @@
+@import '../../../assets/scss/app.variables.scss';
+
+.manage-survey label{
+    display:inline-block;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.manage-survey button.mat-green{
+    margin-bottom: 15px;
+}
+
+.manage-survey .survey-list{
+    display: inline-block;
+    width: 100%;
+    margin: 0px 0;
+    padding: 0;
+}
+.manage-survey .survey-list ul{
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    border-top:1px solid $light-gray-color;
+    margin: 0;
+    &.no-records{
+        text-align: center;
+    }
+}
+
+.manage-survey .survey-list ul li{
+    display: inline-block;
+    width: 96%;
+    margin-bottom: 5px;
+    background:$light-gray-color;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: left;
+}
+.manage-survey .survey-list ul li:hover,
+.manage-survey .survey-list ul li:focus{
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+.manage-survey .survey-list ul li h5{
+  font-weight: 400;
+}
+.manage-survey .survey-list ul li h5 mat-icon{
+float: right;
+cursor: pointer;
+margin: 3px 0 3px 10px;
+}
+.manage-survey .survey-list ul li p{
+  margin: 0;
+}
+.manage-survey .survey-list ul li p:last-child{
+    font-weight: 400;
+}
+
+.add-new{
+    margin-top: 10px;
+}
+

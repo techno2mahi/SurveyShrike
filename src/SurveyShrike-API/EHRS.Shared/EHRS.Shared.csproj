@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5B35CB4-EFA3-4658-B321-825C5F28E1D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EHRS.Shared</RootNamespace>
+    <AssemblyName>EHRS.Shared</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\TMCSupportedDlls\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="system.device" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Twilio.Api">
+      <HintPath>..\packages\Twilio.4.7.2\lib\3.5\Twilio.Api.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caching\Extensions.cs" />
+    <Compile Include="Caching\ICacheManager.cs" />
+    <Compile Include="Caching\MemoryCacheManager.cs" />
+    <Compile Include="Caching\PerRequestCacheManager.cs" />
+    <Compile Include="Configuration\NopConfig.cs" />
+    <Compile Include="Enums\ContactType.cs" />
+    <Compile Include="Enums\IndexProcessType.cs" />
+    <Compile Include="Enums\CommunicationType.cs" />
+    <Compile Include="Enums\DbContext.cs" />
+    <Compile Include="Enums\MappingType.cs" />
+    <Compile Include="Enums\SubmitActionType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fakes\FakeHttpContext.cs" />
+    <Compile Include="Fakes\FakeHttpRequest.cs" />
+    <Compile Include="Fakes\FakeHttpResponse.cs" />
+    <Compile Include="Fakes\FakeHttpSessionState.cs" />
+    <Compile Include="Functional\DataAccessComponents\ISurveyDAC.cs" />
+    <Compile Include="Functional\DataTransferObjects\ISurveyDTO.cs" />
+    <Compile Include="Functional\BusinessDomainComponents\ISurveyBDC.cs" />
+    <Compile Include="Infrastructure\AppDomainTypeFinder.cs" />
+    <Compile Include="Infrastructure\Common\Enums\BDCType.cs" />
+    <Compile Include="Functional\DataTransferObjects\IAppSettingsDTO.cs" />
+    <Compile Include="Functional\DataTransferObjects\ITokenDTO.cs" />
+    <Compile Include="Functional\DataTransferObjects\DTOType.cs" />
+    <Compile Include="Infrastructure\Business\BDCBase.cs" />
+    <Compile Include="Infrastructure\Business\BDCFactory.cs" />
+    <Compile Include="Infrastructure\Business\IBDCFactory.cs" />
+    <Compile Include="Infrastructure\Business\IBusinessDomainComponent.cs" />
+    <Compile Include="Infrastructure\Business\OperationResult\OperationResult.cs" />
+    <Compile Include="Infrastructure\Business\OperationResult\OperationResultType.cs" />
+    <Compile Include="Infrastructure\Common\CommonAttributes\DisplayTextKeyAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\Common\CommonAttributes\EntityPropertyMappingAttribute.cs" />
+    <Compile Include="Infrastructure\Common\CommonAttributes\QualifiedTypeNameAttribute.cs" />
+    <Compile Include="Infrastructure\Common\CommonAttributes\ViewModelPropertyMappingAttribute.cs" />
+    <Compile Include="Infrastructure\Common\Constants\EntityConstants.cs" />
+    <Compile Include="Infrastructure\Common\Constants\MimeTypes.cs" />
+    <Compile Include="Infrastructure\Common\Constants\AppConstants.cs" />
+    <Compile Include="Infrastructure\Common\Constants\ValidationConstants.cs" />
+    <Compile Include="Infrastructure\Common\Constants\GlobalConstants.cs" />
+    <Compile Include="Infrastructure\Common\Constants\ResourceConstants.cs" />
+    <Compile Include="Infrastructure\Common\Constants\SuppressMessageConstants.cs" />
+    <Compile Include="Infrastructure\Common\Enums\DACType.cs" />
+    <Compile Include="Infrastructure\Common\Enums\ObjectStateType.cs" />
+    <Compile Include="Infrastructure\Common\ExceptionHandling\Base\ExceptionBase.cs" />
+    <Compile Include="Infrastructure\Common\ExceptionHandling\CustomExceptions\AttributeNotDefinedException.cs" />
+    <Compile Include="Infrastructure\Common\ExceptionHandling\CustomExceptions\BDCException.cs" />
+    <Compile Include="Infrastructure\Common\ExceptionHandling\CustomExceptions\DACException.cs" />
+    <Compile Include="Infrastructure\Common\ExceptionHandling\CustomExceptions\FactoryException.cs" />
+    <Compile Include="Infrastructure\Common\ExceptionHandling\CustomExceptions\NotificationException.cs" />
+    <Compile Include="Infrastructure\Common\ExceptionHandling\ExceptionManager.cs" />
+    <Compile Include="Infrastructure\Common\Extensions\Extensions.cs" />
+    <Compile Include="Infrastructure\Common\Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Infrastructure\Common\Extensions\GenericIEnumerableExtensions.cs" />
+    <Compile Include="Infrastructure\Common\Extensions\StringExtensions.cs" />
+    <Compile Include="Infrastructure\Common\Extensions\ValueTypeExtensions.cs" />
+    <Compile Include="Infrastructure\Common\Factory\FactoryBase.cs" />
+    <Compile Include="Infrastructure\Common\Logging\ILogger.cs" />
+    <Compile Include="Infrastructure\Common\Logging\Logger.cs" />
+    <Compile Include="Infrastructure\Common\Scheduling\IScheduler.cs" />
+    <Compile Include="Infrastructure\Common\Utilities\AppConstantsUtility.cs" />
+    <Compile Include="Infrastructure\Common\Utilities\DTOUtility.cs" />
+    <Compile Include="Infrastructure\Common\Utilities\EncryptionUtility.cs" />
+    <Compile Include="Infrastructure\Common\Utilities\EnumAttributeUtility.cs" />
+    <Compile Include="Infrastructure\Common\Utilities\GlobalUtility.cs" />
+    <Compile Include="Infrastructure\Common\Utilities\RandomNumberGenerationUtility.cs" />
+    <Compile Include="Infrastructure\Common\Utilities\ResourceUtility.cs" />
+    <Compile Include="Infrastructure\Common\Utilities\ValidatorUtility.cs" />
+    <Compile Include="Infrastructure\Common\Validation\EHRSValidationFailure.cs" />
+    <Compile Include="Infrastructure\Common\Validation\EHRSValidationResult.cs" />
+    <Compile Include="Infrastructure\Data\DACBase.cs" />
+    <Compile Include="Infrastructure\Data\DACFactory.cs" />
+    <Compile Include="Infrastructure\Data\IDACFactory.cs" />
+    <Compile Include="Infrastructure\Data\IDataAccessComponent.cs" />
+    <Compile Include="Infrastructure\DependencyManagement\ContainerManager.cs" />
+    <Compile Include="Infrastructure\DependencyManagement\IDependencyRegistrar.cs" />
+    <Compile Include="Infrastructure\DependencyRegistrar.cs" />
+    <Compile Include="Infrastructure\DTOModel\CustomAttributes\ViewModelMappingAttribute.cs" />
+    <Compile Include="Infrastructure\DTOModel\DTOFactory.cs" />
+    <Compile Include="Infrastructure\DTOModel\IDTO.cs" />
+    <Compile Include="Infrastructure\DTOModel\IDTOFactory.cs" />
+    <Compile Include="Infrastructure\EngineContext.cs" />
+    <Compile Include="Infrastructure\EntityModel\CustomAttributes\EntityMappingAttribute.cs" />
+    <Compile Include="Infrastructure\EntityModel\Enums\MappingDirectionType.cs" />
+    <Compile Include="Infrastructure\EntityModel\Enums\MappingType.cs" />
+    <Compile Include="Infrastructure\IEngine.cs" />
+    <Compile Include="Infrastructure\ITypeFinder.cs" />
+    <Compile Include="Infrastructure\EHRSEngine.cs" />
+    <Compile Include="Infrastructure\Session Manager\CacheManager.cs" />
+    <Compile Include="Infrastructure\Session Manager\Interfaces\IStateManager.cs" />
+    <Compile Include="Infrastructure\Session Manager\SessionStateManager.cs" />
+    <Compile Include="Infrastructure\Session Manager\StateEntityBase.cs" />
+    <Compile Include="Infrastructure\Session Manager\StateManagerBase.cs" />
+    <Compile Include="Infrastructure\Session Manager\UserInfo.cs" />
+    <Compile Include="Infrastructure\Singleton.cs" />
+    <Compile Include="Infrastructure\WebAppTypeFinder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "$(ProjectDir)..\OutputBin\$(TargetFileName)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

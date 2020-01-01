@@ -1,0 +1,37 @@
+<app-loader [class.hide]="!loading" [loadingText]="'loading...'"></app-loader>
+<mat-card class="mat-card manage-survey">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between top">
+        <div fxFlex="100" fxFlex.lt-sm="100" fxFlex.gt-sm="49" fxFlex.gt-xs="49">
+            <div class="display-block">
+                <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+                    <div class="survey-list">
+                        <label class="inner-page-heading">Surveys added</label>
+                        <ng-container *ngIf="surveys?.length > 0;else noSurveys">
+                            <ul>
+                                <li (click)="manageSurveyDetail(survey.id)" *ngFor="let survey of surveys">
+                                    <h5>{{survey.surveyTitle}}
+                                        <mat-icon (click)="deleteSurvey(survey.id)"
+                                            class="mat-icon material-icons" role="img" aria-hidden="true">delete
+                                        </mat-icon>
+                                    </h5>
+                                </li>
+                            </ul>
+                        </ng-container>
+                        <ng-template #noSurveys>
+                            <ul class="no-records">
+                                No Records Found
+                            </ul>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center display-block add-new">
+                <button class="mat-green" (click)="onClickAddSurvey()" type="submit" mat-raised-button>Add New</button>
+            </div>
+        </div>
+        <div fxFlex="100" fxFlex.gt-sm="49" fxFlex.gt-xs="49" class="helper-block">
+
+        </div>
+
+    </div>
+</mat-card>

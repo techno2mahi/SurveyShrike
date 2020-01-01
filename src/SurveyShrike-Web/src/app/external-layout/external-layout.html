@@ -1,0 +1,48 @@
+<div class="overlay overlay-home">
+    <div class="credential-out">
+        <app-loader [class.hide]="!loading"></app-loader>
+            <div class="gene-card-title">
+                <div fxLayout="row wrap" fxLayoutAlign="start center">
+                    <div class="header">
+                        <div class="header-container">
+                            <a class="logo" [routerLink]="['/']">
+                        
+                                <img alt="AT Track" src="assets/images/logo-final.png" width="120" height="90">
+
+                            </a>
+                            <button class="home-humberger-icon" mat-button (click)="customizerFunction()" fxHide="false" fxHide.gt-sm>
+                                <mat-icon>menu</mat-icon>
+                            </button>
+                            <div class="header-menus" fxShow="false" fxShow.gt-sm>
+                                <ul>
+                                    <ng-container *ngFor="let menuitem of menus">
+                                        <li *ngIf="!menuitem.isHidden" [class.active-nav]="router.isActive(menuitem.url)">
+                                            <a  (click)="redirectTo(menuitem.url)">{{ menuitem.title }}</a>
+                                        </li>
+                                    </ng-container>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+         
+
+
+            <div class="gene-base-container" #scrollContainer>
+                <div class="inner-container">
+            <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>
+            </div>
+        </div>
+        <div fxShow="false" fxShow.gt-sm>
+        <footer></footer>
+        </div>
+        <div class="thin-footer-wrapper" fxHide="false" fxHide.gt-sm>
+            <thin-footer></thin-footer>
+          </div>
+    </div>
+</div>
+<div (click)="customizerFunction()" [ngClass]="{'customizer-in-backdrop': customizerIn}"></div>

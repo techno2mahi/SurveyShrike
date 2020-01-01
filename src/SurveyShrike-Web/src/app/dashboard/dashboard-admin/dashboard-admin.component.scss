@@ -1,0 +1,27 @@
+.dash-card mat-card{
+    background: #fff!important;
+    box-shadow: chocolate;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2),0 3px 3px 0 rgba(0,0,0,0.19) !important;
+    color: #000!important;
+    border: 1px solid #e8e8e8;
+    cursor: pointer;
+}
+
+ a.linkk{
+    color: blue
+ }
+
+  
+a:hover
+{
+    cursor: pointer;
+}
+
+ 
+ 
+
+@media (max-width:540px){
+    .dash-card > div{
+        margin-right: 0;
+    }
+}

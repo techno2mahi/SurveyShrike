@@ -1,0 +1,553 @@
+.slider-section{
+float: left;
+width: 100%;
+margin:0px 0 8px 0;
+}
+
+.content-slider-section{
+    width: 90%;
+    margin:0 auto;
+}
+
+.gene-card-content{
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+
+ 
+.app-dwn-btn{
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+}
+.app-dwn-btn img{
+    border-radius: 5px; 
+}
+
+.tile-slider-container{
+    margin: 8px 0;
+}
+.tile-slider-container h1{
+    text-align: center;
+}
+
+.ngxcarouselPoint li.active{
+  background: #8bc34a;
+}
+.ngxcarouselPoint li{
+  background: #2a2933;
+}
+
+
+.slider-wrapper {
+    float: left;
+    width: 100%;
+    height: 402px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+
+.bg-wrapper {
+    overflow: hidden;
+    height: 402px;
+    float: left;
+}
+
+.bg-wrapper img {
+    background-size: cover;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+
+/*Bus*/
+
+
+.bus-wrapper {
+    position: absolute;
+    z-index: 4;
+    bottom:0;
+    animation: busMoving 10s linear -2s infinite;
+  }
+  .bus-info {
+    width: 481px;
+    height: 218px;
+    position: relative;
+  }
+  
+  .bus-info img{
+      width:100%;
+  }
+  
+  @keyframes busMoving {
+    0% {
+      right: 120%;
+      animation-timing-function: ease-out;
+    }
+    35% {
+      right: 30%;
+    }
+    36%,
+    56% {
+      right: 29.8%;
+      animation-timing-function: ease-in;
+    }
+    100% {
+      right: -80em;
+    }
+  }
+  
+  
+  /*Weel*/
+  .wheel{
+      position: absolute;
+      width: 80px;
+      height: 78px;
+      bottom: 1px;
+      animation: goWheel 10s linear -2s infinite;
+  }
+  .wheel img{
+      width:100%;
+  }
+  
+  ._w-leftw {
+    left:4.2em;
+  }
+  
+  ._w-rightw {
+    right: 1.7em;
+  }
+  
+  
+  @keyframes goWheel {
+    0% {
+      transform: rotate(0deg);
+      animation-timing-function: ease-out;
+    }
+    36%,
+    56% {
+      transform: rotate(350deg);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: rotate(910deg);
+    }
+  }
+  
+  
+  @media (max-width: 767px){
+  .bus-wrapper {
+      bottom: 12px;
+  }
+  .bus-info {
+      width: 202px;
+      height: 70px;
+  }
+  .wheel {
+      width: 25px;
+      height: 25px;
+      bottom: -11px;
+  }
+  ._w-leftw {
+    left: 2.3em;
+  }
+  ._w-rightw {
+    right: 1.1em;
+  }
+  }
+
+  
+/*child still*/
+.child-still{
+	width:153px;/*
+	height: 223px;*/
+	position: absolute;
+	bottom:0;/*
+	left: 131px;*/
+  	animation: childStill 10s linear -2s infinite;
+  right:0;
+  z-index: 2;
+}
+
+.child-still img{
+	position:absolute;
+	bottom:0;
+}
+
+@keyframes childStill {
+  0% {
+	opacity:1;
+  }
+  29% {
+	opacity:1;
+  }
+  30% {
+	opacity:0;
+  }
+  
+  59% {
+	opacity:0;
+  }
+  100% {
+	opacity:0;
+  }
+}
+
+/*Child*/
+.child-wrap{
+	float:left;
+	width:500px;
+	height: 220px;
+	position: absolute;
+	z-index: 3;
+  bottom:0;
+  z-index: 2;
+}
+
+.child-info {
+	width:85px;
+	height: 125px;
+	position: absolute;
+  	animation: childMoving 10s linear -2s infinite;
+}
+
+@keyframes childMoving {
+  0% {/*
+    right: 50%;*/
+	right: -2px;
+    animation-timing-function: ease-out;
+	bottom:0;
+	opacity:0;
+  }
+  35% {/*
+    right: 50%;*/
+	right: -2px;
+  }
+  29% {
+	opacity:0;
+  }
+  30% {
+	opacity:1;
+  }
+
+  57%,
+  58% {/*
+    right: 6%;*/
+	right: -50%;
+    animation-timing-function: ease-in;
+	bottom:0;
+	opacity:1;
+  }
+  59% {
+	bottom:60px;
+	opacity:0;
+  }
+  100% {
+    right: 0em;
+	bottom:60px;
+	opacity:0;
+  }
+}
+
+
+
+
+@keyframes childWalk{
+	0% {
+    background-position: 0px;
+    opacity:1;  
+	}
+	
+	35% { 
+    opacity:1;
+	}
+	
+	57%,
+	58% {
+    opacity:1;
+	}
+	
+	59% {
+	}
+	
+	100% {
+    background-position: -563px; 
+    opacity:0;
+	}
+}
+
+/*@keyframes sit-down { 
+	80% {
+		background-position: 0;
+	} 
+  100% {background-position: -563px; } 
+}*/
+
+@media (max-width: 767px){
+.child-wrap {
+    width: 33%;
+    height: 50px;
+}
+.child-still {
+    width: 34px;
+    height: 49px;
+}
+.child-still img {
+    height: 49px;
+}
+.child-info {
+    width: 16px;
+    height: 29px;
+}
+ 
+#mobile img{
+    width: 36%;
+}
+
+
+@keyframes childWalk{
+	0% {
+		background-position: 0px;  
+	}
+	
+	35% { 
+	}
+	
+	57%,
+	58% {
+	}
+	
+	59% {
+	}
+	
+	100% {
+		background-position: -126px; 
+	}
+}
+
+
+
+}
+
+/*Mobile*/
+#mobile{
+    position: absolute;
+    bottom: 0;
+	right:0;
+	z-index: 5;
+	text-align: right;
+    -webkit-animation: movingmobile 10s linear infinite;
+	-moz-animation: movingmobile 10s linear infinite;
+    -o-animation: movingmobile 10s linear infinite;
+    z-index: 2;
+}
+
+@-webkit-keyframes movingmobile {
+0% { 
+		bottom:0;
+		opacity:0;
+    }
+	
+	10% { 
+		bottom:0;
+    }
+	20% { 
+		bottom:0;
+    }
+	25% { 
+		bottom:0;
+    }
+	30% { 
+		bottom:0;
+    }
+	35% { 
+		bottom:0;
+    }
+	40% { 
+		bottom:0;
+    }
+    45% { 
+		bottom:0;
+    }
+    50% {
+		bottom:0;
+    }
+    60% {
+		bottom:0;
+		opacity:0;
+    }
+    65% {
+		bottom:0;
+		opacity:0;
+    }
+    80% {
+		bottom:0;
+		opacity:1;
+    }
+    82% {
+		bottom:0;
+		opacity:0;
+    }
+    100% {
+		opacity:0;
+    }
+}
+
+
+/*Mother*/
+.parent-wrapper {
+	width:88px;
+	height: 194px;
+	position: absolute;
+  	animation: motherShake 10s linear -2s infinite;
+    bottom: -1px;
+    z-index: 2;
+}
+
+@keyframes motherShake {
+  0% {
+	right: 54px;
+    animation-timing-function: ease-out;
+	bottom:-1px;
+	opacity:0;
+  }
+  35% {
+	right: 54px;
+  }
+  29% {
+	opacity:0;
+  }
+  30% {
+	opacity:1;
+  }
+
+  57%,
+  58% {
+	right: 54px;
+    animation-timing-function: ease-in;
+	bottom:-1px;
+	opacity:1;
+  }
+  90% {
+	bottom:-1px;
+	opacity:1;
+  }
+  91% {
+	bottom:-1px;
+	opacity:0;
+  }
+  100% {
+	right: 54px;
+	bottom:-1px;
+	opacity:0;
+  }
+}
+
+ 
+
+
+@keyframes motherWalk{
+	0% {
+		background-position: 0px;  
+	}
+	
+	35% { 
+	}
+	
+	57%,
+	58% {
+	}
+	
+	59% {
+	}
+	
+	100% {
+		background-position: -198px; 
+	}
+}
+
+@media (max-width: 767px){
+.parent-wrapper {
+    width: 23px;
+    height: 49px;
+}
+ 
+
+@keyframes motherWalk{
+	0% {
+		background-position: 0px;  
+	}
+	
+	35% { 
+	}
+	
+	57%,
+	58% {
+	}
+	
+	59% {
+	}
+	
+	100% {
+		background-position: -268px; 
+	}
+}
+
+@keyframes motherShake {
+  0% {
+	right: 10px;
+    animation-timing-function: ease-out;
+	bottom:-1px;
+	opacity:0;
+  }
+  35% {
+	right: 10px;
+  }
+  29% {
+	opacity:0;
+  }
+  30% {
+	opacity:1;
+  }
+
+  57%,
+  58% {
+	right: 10px;
+    animation-timing-function: ease-in;
+	bottom:-1px;
+	opacity:1;
+  }
+  90% {
+	bottom:-1px;
+	opacity:1;
+  }
+  91% {
+	bottom:-1px;
+	opacity:0;
+  }
+  100% {
+	right: 10px;
+	bottom:-1px;
+	opacity:0;
+  }
+}
+
+}
+
+@media(max-width:767px){
+  .slider-wrapper {
+    height: 195px
+  }
+  .slider-section .mat-card{
+    padding: 0;
+  }
+}
+@media (min-width:376px) and (max-width:767px){
+#mobile{
+  max-width: 18%;
+}
+}

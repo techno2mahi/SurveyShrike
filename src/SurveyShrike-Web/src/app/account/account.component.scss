@@ -1,0 +1,105 @@
+.credential-out {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 490px;
+    padding: 20px;
+    .mat-divider {
+        position: absolute;
+        width: 100%;
+    }
+}
+
+.mrgn-l {
+    margin-left: 0.5em;
+}
+
+.mrgn-r {
+    margin-right: 0.5em;
+}
+
+.or-sepration {
+    position: relative;
+    min-height: 25px;
+
+    span {
+        background: #fff;
+        position: absolute;
+        z-index: 10;
+        padding: 2px 5px;
+        text-align: center;
+        top: -2px;
+        left: 46%;
+    }
+    
+    &::after {
+        position: absolute;
+        border-bottom: 1px solid #ccc;
+        content: '';
+        width: 100%;
+        left: 0;
+        top: 10px;
+        z-index: 0;
+    }
+}
+
+
+@media(max-width: 767px) {
+    .credential-out {
+        padding: 5px 0;
+        z-index: 10;
+        .mat-card {
+            box-shadow: none;
+            background: white;
+        }
+    }
+    .overlay{
+        width: 100%;
+        z-index: 9;
+
+        &.overlay-login{
+           background: #fff;
+        }
+
+        &.overlay-height-full {
+            background: #fff;
+            height: 100%;
+        }
+    }
+}
+.forget-password-container{
+    .mat-input-wrapper{
+        position: relative;
+    }
+}
+
+.forget-password-container input{
+    width:100%;
+    border:none;
+}
+.forget-password-container input:focus{
+ outline: none;
+}
+
+.back-resend{
+    .back-button{
+        width:20%;
+        margin-bottom: 10px;
+    }
+    .resend{
+        width:100%;
+        margin-bottom: 10px;
+        button{
+            width:100%;
+        }
+    }
+    .submit-button{
+        width:100%;
+        float: right;
+    }
+}
+
+@media(min-width: 767px) {
+.forget-password-container{
+    min-height: 464px;
+}
+}
