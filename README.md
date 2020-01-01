@@ -1,4 +1,3 @@
-# [TODO] will be committing the code in a day or two
 
 ## SurveyShrike
 This is the survey application which manages surveys. The admin have access to the survey create and management and the normal users will be able to take surveys.
